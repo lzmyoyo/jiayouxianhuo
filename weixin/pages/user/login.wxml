@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="body">
+  <view class="container">
+    <view class="userinfo">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">
+        长期售卖需要认证，认证费用100-500元。需要用户接受长期审核，确保不是中间商家在供货。并且卖家需同意商品来源是
+      </text>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/login",
+    "pages/index/me",
+    "pages/product/list",
+    "pages/product/add",
+    "pages/index/category",
+    "pages/index/bendi",
+    "pages/index/cart"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "家有鲜货",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#b8b7b7",
+    "selectedColor":"#f134c2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "全国",
+        "iconPath":"/lib/image/all.png",
+        "selectedIconPath":"/lib/image/select/all.png"
+      },
+      {
+        "pagePath": "pages/index/bendi",
+        "text": "当地",
+        "iconPath": "/lib/image/biaoshilei_bendi.png",
+        "selectedIconPath": "/lib/image/select/biaoshilei_bendi.png"
+      },
+      {
+        "pagePath": "pages/index/category",
+        "text": "分类",
+        "iconPath": "/lib/image/fenlei.png",
+        "selectedIconPath": "/lib/image/select/fenlei.png"
+      },
+      {
+        "pagePath": "pages/index/cart",
+        "text": "购物车",
+        "iconPath": "/lib/image/gouwucheman.png",
+        "selectedIconPath": "/lib/image/select/gouwucheman.png"
+      },
+      {
+        "pagePath": "pages/index/me",
+        "text": "我的",
+        "iconPath": "/lib/image/wode.png",
+        "selectedIconPath": "/lib/image/select/wode.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

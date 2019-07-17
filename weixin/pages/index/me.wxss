@@ -1,0 +1,96 @@
+page{
+  background-color: #f2f2f2;
+}
+#grad1 {
+    height: 270rpx;
+    background: -webkit-linear-gradient(left, #fbece5 , #f6d4e2); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #fbece5 , #f6d4e2); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #fbece5 , #f6d4e2); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #fbece5 , #f6d4e2); /* 标准的语法（必须放在最后） */
+}
+.user-header{
+  padding:50rpx 30rpx 0rpx 30rpx;
+}
+.user-image{
+  border:solid #ccc 1rpx;
+  width:150rpx;
+  height:150rpx;
+  padding:5rpx;
+  background: #fff;
+  border-radius: 50%;
+
+}
+.user-image image{
+  height:100%;
+  width:100%;
+  border-radius: 50%;
+  background: #fbece5
+}
+.user-name .name{
+  font-size:18px;
+  font-weight: 700;
+  color: #444348;
+  display: block;
+  margin-top:25rpx;
+}
+.user-name .name-type{
+  display: inline-block;
+  font-size:14px;
+  color: #9b9595;
+  border:solid #9b9595 1rpx;
+  border-radius: 20rpx;
+  padding:2rpx 10rpx;
+  margin-top: 10rpx;
+}
+
+
+
+.main-content{
+  padding:0rpx 30rpx;
+}
+.view-content{
+  padding:20rpx 0rpx;
+  border-radius: 20rpx;
+  margin-top:20rpx; 
+  background-color: #fff;
+}
+.user-nums {
+  font-size:14px
+}
+.user-nums .title{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.user-nums .nums{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 700
+}
+.user-line .van-col{
+  border-right: solid #ccc 1rpx;
+}
+.view-title{
+  padding:30rpx 20rpx 40rpx 20rpx;
+  vertical-align: middle;
+}
+.action-title{
+  font-size:18px;
+  padding-left:10rpx
+}
+.action-right-title{
+  font-size:12px;
+  text-align: right;
+}
+.actioin-image{
+  display: block;
+  text-align: center
+}
+.actioin-image image{
+  width: 100%;
+  height: 50rpx;
+}
+.to-all{
+  display: inline-block;
+}

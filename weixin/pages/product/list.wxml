@@ -1,0 +1,20 @@
+
+<view style="margin:0px 5px">
+<van-row gutter="5">
+  <van-col span="12">
+      <view>
+        <image src=""></image>
+      </view>
+  </van-col>
+  <van-col span="12">
+    <view style="background-color:#ccc;height:160rpx; width:100%">
+    ddd
+    </view>
+  </van-col>
+  <van-col span="12">
+    <view style="background-color:#ccc;height:160rpx; width:100%">
+    ddd
+    </view>
+  </van-col>
+</van-row>
+</view>
