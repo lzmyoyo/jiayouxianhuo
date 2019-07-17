@@ -2,7 +2,7 @@
     $config = array(
          'db' => array(                                   //数据库配置文件
              'type' => 'mysql',
-             'port' => '3306',
+             'port' => '',
              'host' => '101.37.67.41',
              'dbName' => 'jiayouxianhuo',
              'user' => 'root',
@@ -28,7 +28,7 @@
         'viewPath' => APPPATH . 'views/',                   //视图地址
         'log' => APPPATH . 'log.txt',                       //日志地址
         'newPath' => array('admin','api'),  //模块控制器
-        'siteUrl' => 'http://dev.jiayouxianhuo.com',
+        'siteUrl' => 'http://101.37.67.41',
         'adminFiltrateAction' => array(                     //后台访问时过滤这些控制器方法可以不用登录
             'indexController' => array(
                 'login',
@@ -69,7 +69,7 @@
             'secret' => '0b72e95b3bd312f10ad715247cf72786',
             'getSessionKeyUrl' => 'https://api.weixin.qq.com/sns/jscode2session'
         ],
-        'apiUrl' => 'http://dev.jiayouxianhuo.com/api/',
+        'apiUrl' => 'http://101.37.67.41/api/',
     );
     include 'menu.php';
     return $config;
