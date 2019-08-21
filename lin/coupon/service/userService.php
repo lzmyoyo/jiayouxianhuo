@@ -55,8 +55,47 @@ class userService extends linservice
         } else {
             return [];
         }
+    }
 
+    public function getUserInfoByToken($userToken) {
+        $userModel = new userModel();
+        return $userModel->getUserInfoByToken($userToken);
+    }
 
+    public function getAccessToken() {
+        $accessTokenModel = new accessTokenModel();
+        $serverTokenResult = $accessTokenModel->getToken();
+        $accessToken = '';
+        $isRestToken = true;
+        $tokenId = 0;
+        if($serverTokenResult && $serverTokenResult['accessToken']) {
+            $tokenId = $serverTokenResult['id'];
+            $nowTime = time() - 600;
+            $tokenLastTime = $serverTokenResult['addTime'] + $serverTokenResult['expiresIn'];
+            if($nowTime < $tokenLastTime) {
+                $accessToken = $serverTokenResult['accessToken'];
+                $isRestToken = false;
+            }
+        }
+        if($isRestToken) {
+            $wxService = utils::getService('wx');
+            $wxResult = $wxService->getAccessToken();
+            if($wxResult) {
+                $accessToken = $wxResult['accessToken'];
+                $saveData = [
+                    'accessToken' =>  $wxResult['accessToken'],
+                    'expiresIn' =>  $wxResult['expiresIn'],
+                    'addTime' => time()
+                ];
+                if($tokenId) {
+                    $saveData['id'] = $tokenId;
+                    $accessTokenModel->save($saveData);
+                } else {
+                    $accessTokenModel->insert($saveData);
+                }
+            }
+        }
+        return $accessToken;
     }
 
 

@@ -67,7 +67,7 @@
         'wxConfig' => [
             'appId' => 'wx3de89ce51f23023e',
             'secret' => '0b72e95b3bd312f10ad715247cf72786',
-            'getSessionKeyUrl' => 'https://api.weixin.qq.com/sns/jscode2session'
+            'serverApiUrl' => 'https://api.weixin.qq.com',
         ],
         'apiUrl' => 'http://101.37.67.41/api/',
     );

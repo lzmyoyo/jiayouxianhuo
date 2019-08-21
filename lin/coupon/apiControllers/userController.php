@@ -38,10 +38,14 @@
                 $returnData = $userService->saveUserInfoByToken($userToken,$userData);
                 $this->reponseJsonDataNew(200,['userInfo'=>$returnData],'success');
             } else {
-                $returnData = [];
                 $this->reponseJsonDataNew(400,[],'success');
             }
 
+        }
+
+        public function aa() {
+            $userService = utils::getService('user');
+            echo $userService->getAccessToken();
         }
 
 	}

@@ -6,9 +6,12 @@
 	class utils{
 		private static $db;
 
+
         public static $serviceNameArr = array();
 
         public static $serviceObjArr = array();
+
+        public static $userInfo = [];
         /**
          * 访问配置文件内容。
          */

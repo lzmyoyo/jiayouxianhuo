@@ -353,7 +353,10 @@
                 $paramJson = file_get_contents('php://input', 'r');
                 if($paramJson) {
                     self::$inputParam = json_decode($paramJson,true);
+                    return self::$inputParam;
                 }
+            } else {
+                return self::$inputParam;
             }
         }
 
