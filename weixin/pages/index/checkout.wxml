@@ -1,0 +1,79 @@
+<view class="shipping-address">
+   <van-row>
+    <van-col span="22">
+      <view class="tag-city">
+        <text class="tag-name">家</text> <text class="city-name">浙江省杭州市拱墅区</text>
+      </view>
+      <view class="address-info">
+        <text>祥茂路99号科锐6号楼3楼</text>
+      </view>
+      <view class="shipping-user">
+        <text class="user-name">林智敏</text>
+        <text class="user-phone">158*******99</text>
+      </view>
+    </van-col>
+    <van-col span="2">
+      <view class="edit-shppping-address">
+        <van-icon size="18px" name="arrow" />
+      </view>
+    </van-col>
+   </van-row>
+</view>
+
+<view class="cart-list">
+  <view class="cart-item">
+    <van-row gutter="10">
+      <van-col span="6">
+        <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+      </van-col>
+      <van-col span="18">
+        <view class="cart-product-name">
+          <label>浦江葡萄，朋友家自葡萄，朋友家自己种植的，现采现发</label>
+        </view>
+        <view>
+          <label class="sku-name">10斤装</label>
+        </view>
+        <view>
+          <label class="product-price">¥80.00</label>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <view class="product-ext">
+    <van-cell-group>
+      <van-field
+        type="textarea"
+        placeholder="备注要求"
+        bind:change="inputTextDesc"
+        value=""
+        border="false"
+      />
+    </van-cell-group>
+  </view>
+</view>
+
+
+
+<view class="order-total">
+  <view class="total-price">
+    <van-row>
+      <van-col span="12">
+        应付金额:
+      </van-col>
+      <van-col span="12">
+        <view class="price">
+          80.00
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+</view>
+
+
+<view class="submit-order">
+  <van-submit-bar
+  price="{{ 3050 }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+</view>

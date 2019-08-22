@@ -1,2 +1,123 @@
-<!--pages/index/cart.wxml-->
-<text>pages/index/cart.wxml</text>
+<!-- <view class="no-product">
+  <view class="view-content">
+    <image class="empty-cart-image" src="/lib/image/emptycart.png" mode="widthFix"></image>
+    <text class="no-product-text">
+      空空如也!
+    </text>
+  </view>
+</view> -->
+
+<view class="cart-list">
+  <view class="cart-item">
+    <van-row gutter="6">
+      <van-col span="7">
+        <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+      </van-col>
+      <van-col span="17">
+        <view class="cart-product-name">
+          <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+</view>
+
+
+
+
+<view class="view-title">
+  <text>猜你喜欢</text>
+</view>
+<view style="margin:15px 15px">
+<van-row gutter="8">
+  <van-col span="12">
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/1.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/3.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+  </van-col>
+
+  <van-col span="12">
+    <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/4.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/7.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/6.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+  </van-col>
+</van-row>
+</view>

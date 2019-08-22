@@ -17,8 +17,7 @@ Page({
    */
   onLoad: function (options) {
     lastPage = options.page;
-    if (app.globalData.userInfo) {
-      console.log(333);
+    if (app.globalData.userInfo && app.globalData.userInfo.nickName != '') {
       app.setUserData(app.globalData.userInfo);
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -82,7 +81,9 @@ Page({
   },
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo;
+    console.log(e.detail.userInfo);
     app.setUserData(app.globalData.userInfo,function(){
+      console.log('回调');
       if (lastPage == undefined || lastPage == '' || lastPage == 'undefined') {
         wx.switchTab({
           url: '/pages/index/index',

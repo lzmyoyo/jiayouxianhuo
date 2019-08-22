@@ -1,0 +1,89 @@
+page{
+  background-color: #f2f2f2
+}
+.shipping-address{
+  background-color: #fff;
+  padding:15px;
+  border-radius: 0px 0px 5px 5px;
+  position: relative
+}
+.tag-city{
+  font-size:12px;
+}
+.tag-city .tag-name{
+  color: #fff;
+  background-color: blue;display: inline-block;padding:0px 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.address-info{
+  margin-top:5px
+}
+.address-info text{
+  font-size:16px; font-weight: 500;
+  line-height: 24px;
+}
+.shipping-user text{
+  font-size:12px;
+}
+.shipping-user .user-name{
+  display: inline-block;margin-right: 10px
+}
+.edit-shppping-address{
+  position: absolute;
+  top:50%;
+  text-align: center;
+  right: 0px;
+  margin-right:15px;
+  color:#999;
+  margin-top: -8px;
+}
+
+
+.cart-list{
+  margin-top:15px;
+  background-color: #fff;
+  padding:15px;
+}
+.cart-item{
+  
+}
+.cart-item image{
+  width: 100%;
+  border-radius: 5px;
+}
+.cart-product-name label{
+  font-size:14px;
+  display: inline-block;
+}
+.sku-name{
+  font-size:12px;
+  color: #999;
+}
+.product-price{
+  font-size:14px;
+  color: #d7483a;
+  font-weight: 500
+}
+.order-total{
+  margin-top: 15px;
+  padding:0px 15px;
+  background-color: #fff
+}
+.total-price{
+  padding:10px 0px;
+  font-size:14px;
+}
+.total-price .price{
+  text-align: right;
+  color: #d7483a;
+}
+
+.product-ext textarea{
+  font-size: 14px;
+}
+.product-ext .van-cell{
+  padding-left:0px;
+  padding-right:0px;
+  font-size: 16px;
+}

@@ -1,0 +1,95 @@
+.product-info{
+  padding:10px;
+}
+.product-image{
+  margin-top: 10px
+}
+.product-image image{
+  float:left;
+  width: 100%
+}
+.price-from{
+  padding:5px 0px 5px 0px;
+}
+.price-from .price{
+  color: #b62827;
+  font-size:14px;
+}
+.price-from .price text{
+  font-size:20px;
+}
+.price-from .price text{
+  font-size:18px;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 8rpx;
+}
+.price-from .from{
+font-size:12px;
+text-align: right;
+color: #999
+}
+.price-from .from text{
+  display: inline-block;
+  margin-top: 3px;
+}
+.product-title{
+  font-size: 16px;
+  font-weight: 700
+}
+.user-info{
+  font-size:12px;
+  margin:3px 0px;
+  color: #999
+}
+.user-tag{
+   font-size:10px;
+}
+.user-tag text{
+  display: inline-block;
+  margin-right: 5px;
+  color: #999
+}
+.product-text{
+  font-size:14px;
+  margin-top:10px
+}
+.all-sku{
+  font-size:12px;
+  padding: 0px 15px;
+  min-height: 300px;
+  position: relative;
+}
+.sku-key-name{
+  font-size:12px;
+  font-weight: 700
+}
+.sku-val{
+  padding:10px 0px;
+}
+.sku-val text{
+  display: inline-block;padding:2px 10px;background-color: #f2f2f2; border-radius: 10px; margin-right:10px;
+}
+.product-add-num{
+  font-size:12px;
+  height: 35px;
+  line-height: 35px;
+  font-weight: 700
+}
+.add-num{
+  text-align: right;height: 35px
+}
+.to-order{
+  margin:20px 0px 0px -15px;
+  position: absolute;
+  bottom: 0px;
+  display: inline-block;
+  width: 100%;
+}
+.to-order button{
+  width: 100%;
+}
+.close-sku{
+  text-align: right;
+  margin-top:10px
+}

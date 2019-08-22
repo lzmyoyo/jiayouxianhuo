@@ -64,11 +64,11 @@ VantComponent({
                 .then((height) => {
                 if (expanded) {
                     return this.set({
-                        contentHeight: height ? `${height}px` : 'auto'
+                        contentHeight: height ? `auto` : 'auto'
                     });
                 }
                 else {
-                    return this.set({ contentHeight: `${height}px` })
+                    return this.set({ contentHeight: `auto` })
                         .then(nextTick)
                         .then(() => this.set({ contentHeight: 0 }));
                 }

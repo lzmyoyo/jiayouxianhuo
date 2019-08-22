@@ -1,7 +1,9 @@
 //app.js
-var apiUrl = 'http://dev.jiayouxianhuo.com/api';
-var storageTokenKey = 'userTokentttttttttttttttttttttttttttttttt';
-var storageUserKey = 'userInfotttttttttttt';
+//var apiUrl = 'http://101.37.67.41:81/api';
+var serverUrl = 'http://dev.jiayouxianhuo.com';
+var apiUrl = serverUrl + '/api';
+var storageTokenKey = 'userTokenttttttttttttttttttttttttttttttttttttttttttttttttt';
+var storageUserKey = 'userInfottttttttttttttttttttttttttt';
 function login(callBack) {
   wx.login({
     success: res => {
@@ -58,7 +60,6 @@ App({
                   _self.globalData.isScopeUserInfo = true;
                   _self.globalData.userInfo = res.data;
                 } else{
-
                   _self.appGetUserInfo(function (userResult) {
                     if (userResult == '') {
                       _self.globalData.isScopeUserInfo = false;
@@ -147,6 +148,7 @@ App({
 
   },
   setUserData: function (userInfo,callBack = '') {
+    console.log('保存用户信息6');
     var _self = this;
     wx.request({
       url: _self.globalData.apiUrl + '/user/saveUserInfo',
@@ -155,14 +157,20 @@ App({
       success: function (res) {
         var dataResult = res.data;
         if (dataResult.code == 200) {
-          console.log('保存成功');
-          console.log(dataResult.data.userInfo);
-          _self.globalData.isScopeUserInfo = true;
-          _self.globalData.userInfo = dataResult.data.userInfo;
-          wx.setStorage({
-            key: _self.globalData.storageUserKey,
-            data: dataResult.data.userInfo,
-          });
+          if (dataResult.data.userInfo.nickName == undefined) {
+            login(function (isScopeUserInfo, userInfo) {
+              _self.globalData.isScopeUserInfo = isScopeUserInfo;
+              _self.globalData.userInfo = userInfo;
+            });
+          } else {
+            console.log('保存成功');
+            _self.globalData.isScopeUserInfo = true;
+            _self.globalData.userInfo = dataResult.data.userInfo;
+            wx.setStorage({
+              key: _self.globalData.storageUserKey,
+              data: dataResult.data.userInfo,
+            });
+          }
           if (callBack != undefined && callBack != '') {
             callBack();
           }
@@ -205,12 +213,29 @@ App({
       url: pageName,
     });
   },
+  appTokenRequest:function(url,data,success,fail = '') {
+    data.userToken = this.globalData.userToken;
+    wx.request({
+      url: this.globalData.apiUrl + url,
+      data:data,
+      method: 'post',
+      success:function(res){
+        success(res);
+      },
+      fail:function(failRes) {
+        if(fail != undefined) {
+          fail(failRes);
+        }
+      }
+    })
+  },
   globalData: {
     storageTokenKey: storageTokenKey,
     storageUserKey: storageUserKey,
     userInfo: null,
     isScopeUserInfo:false,
     userToken:'',
+    serverUrl: serverUrl,
     apiUrl:apiUrl
   }
 })

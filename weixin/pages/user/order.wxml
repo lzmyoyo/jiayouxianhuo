@@ -1,0 +1,364 @@
+
+<van-tabs active="{{ active }}" sticky bind:change="onChange">
+  <van-tab title="待支付">
+    <view class="all-order">
+      <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/1.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+
+      <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/4.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+
+
+      <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+
+      <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+
+
+      <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+
+    </view>
+  
+  </van-tab>
+  <van-tab title="待发货">
+    <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+  </van-tab>
+  <van-tab title="待收货">
+  
+    <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+  
+  </van-tab>
+  <van-tab title="待评价">
+  
+    <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+
+  </van-tab>
+  <van-tab title="所有">
+  
+    <view class="product-item">
+        <view class="info">
+          <van-row>
+            <van-col span="6">
+              <view class="product-image">
+                <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+                <view style="clear:both"></view>
+              </view>
+            </van-col>
+            <van-col span="15">
+              <view class="product-info">
+                <view>
+                  <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+                </view>
+                <view class="sku">
+                  <text>红色、L</text>
+                </view>
+              </view>
+            </van-col>
+            <van-col span="3">
+              <view class="price-num">
+                <text class="price">12.00</text>
+                <text class="num">x2</text>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+        <view class="total-price">
+          <text>合计:¥</text><text class="all-price">569.00</text>
+        </view>
+
+        <view class="order-action">
+          <view class="action-item">在线支付</view>
+          <view class="action-item">查看物流</view>
+          <view class="action-item">删除订单</view>
+        </view>
+      </view>
+
+  </van-tab>
+</van-tabs>
+
+

@@ -1,2 +1,276 @@
-<!--pages/product/add.wxml-->
-<text>pages/product/add.wxml</text>
+<view class="main-content">
+
+<form report-submit="true" bindsubmit="addProduct" bindreset="formReset">
+  <view class="item-view product-title">
+    <text>标题</text>
+    <van-cell-group>
+      <van-field
+        name="productName" 
+        value="{{ productInfo.productName }}"
+        bind:change="onInputProductName"
+        placeholder="请填写商品标题"
+      />
+    </van-cell-group>
+  </view>
+
+
+  <view class="item-view product-title">
+    <text>价格</text>
+    <van-cell-group>
+      <van-field
+        name="productPrice"
+        bind:change="onInputProductPrice"
+        value="{{ productInfo.productPrice }}"
+        placeholder="请填写商品价格"
+      />
+    </van-cell-group>
+  </view>
+
+  <view class="item-view product-title">
+    <text>运费</text>
+    <van-cell-group>
+      <van-field
+        name="productYunfei"
+        bind:change="onInputProductShippingPrice"
+        value="{{ productInfo.shippingPrice }}"
+        placeholder="我们强烈建议你包邮"
+      />
+    </van-cell-group>
+  </view>
+
+
+
+
+
+  <view class="item-view product-title">
+    <text>有效期</text>
+    <van-cell-group>
+      <van-field
+        name="productTime"
+        bind:change="onInputProductExpireDay"
+        value="{{ productInfo.expireDay }}"
+        placeholder="有效期最多20天,20天后商品自动下架"
+      />
+    </van-cell-group>
+  </view>
+  
+<view class="item-view">
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+    <van-collapse-item title="商品规格 (自定义)" name="1">
+    <view class="sku-key-item">
+        <van-row>
+          <van-col span="10">
+            <view class="sku-key">
+               <van-cell-group>
+                <van-field
+                  type="text"
+                  name="skuKeyOne"
+                  data-key="one"
+                  bind:change="inputSkuKey"
+                  placeholder="规格:颜色"
+                  border="false"
+                />
+              </van-cell-group>
+            </view>
+          </van-col>
+          <van-col span="1">
+            <view class="naspace">
+            <text></text>
+            </view>
+          </van-col>
+          <van-col span="10">
+            <view class="sku-key">
+              <van-cell-group>
+              <van-field
+                type="text"
+                name="skuKeyTwo"
+                data-key="two"
+                bind:change="inputSkuKey"
+                placeholder="规格:尺码"
+                border="false"
+              />
+            </van-cell-group>
+            </view>
+          </van-col>
+          <van-col span="3">
+            <view>
+              <van-icon custom-style="margin-left:30rpx;margin-top:10rpx" bind:click="addSkuItem" color="blue" name="add-o" size="25px" />
+            </view>
+          </van-col>
+        </van-row>
+
+
+        <block wx:for="{{ skuList }}" wx:for-index="indexNum" wx:for-item="skuItem">
+
+        <view class="sku-item-list" wx:if="{{ skuItem.skuTwoName != '' }}">
+        <van-row>
+          <van-col span="6">
+            <view class="sku-key-val">
+              <van-cell-group>
+                <van-field
+                  type="text"
+                  bind:change="inputSkuVal"
+                  data-index="{{ indexNum }}"
+                  data-key="one"
+                  value="{{ skuItem.skuOneNameVal }}"
+                  placeholder="{{ skuItem.skuOneName }}"
+                  border="false"
+                />
+              </van-cell-group>
+            </view>
+          </van-col>
+          <van-col span="1">
+          <text></text>
+          </van-col>
+          <van-col span="6">
+            <view class="sku-key-val">
+              <van-cell-group>
+                <van-field
+                  type="text"
+                  bind:change="inputSkuVal"
+                  data-index="{{ indexNum }}"
+                  data-key="two"
+                  value="{{ skuItem.skuTwoNameVal }}"
+                  placeholder="{{ skuItem.skuTwoName }}"
+                  border="false"
+                />
+              </van-cell-group>
+            </view>
+          </van-col>
+          <van-col span="1">
+          <text></text>
+          </van-col>
+          <van-col span="7">
+            <view class="sku-key-val">
+              <van-cell-group>
+                <van-field
+                  type="text"
+                  value=""
+                  placeholder="价格:{{ skuItem.skuPrice }}"
+                  border="false"
+                />
+              </van-cell-group>
+            </view>
+          </van-col>
+          <van-col span="3">
+            <van-icon custom-style="margin-left:30rpx;margin-top:10rpx" data-index="{{ indexNum }}" bind:click="removeSku"	 color="blue" name="delete" size="25px" />
+          </van-col>
+        </van-row>
+        </view>
+
+
+
+
+        <view class="sku-item-list" wx:else>
+        <van-row>
+          <van-col span="13">
+            <view class="sku-key-val">
+              <van-cell-group>
+                <van-field
+                  type="text"
+                  bind:change="inputSkuVal"
+                  data-index="{{ indexNum }}"
+                  data-key="one"
+                  value="{{ skuItem.skuOneNameVal }}"
+                  placeholder="{{ skuItem.skuOneName }}"
+                  border="false"
+                />
+              </van-cell-group>
+            </view>
+          </van-col>
+          <van-col span="1">
+          <text></text>
+          </van-col>
+          <van-col span="7">
+            <view class="sku-key-val">
+              <van-cell-group>
+                <van-field
+                  type="text"
+                  value=""
+                  placeholder="价格:{{ skuItem.skuPrice }}"
+                  border="false"
+                />
+              </van-cell-group>
+            </view>
+          </van-col>
+          <van-col span="3">
+            <van-icon custom-style="margin-left:30rpx;margin-top:10rpx" data-index="{{ indexNum }}" bind:click="removeSku" color="blue" name="delete" size="25px" />
+          </van-col>
+        </van-row>
+        </view>
+
+        
+
+
+        </block>
+
+
+       
+
+
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="商品详情 (图文介绍)" name="2">
+      <view class="product-info">
+        <block wx:for="{{ productDesc }}" wx:for-index="indexNum" wx:for-item="info">
+        <view class="image" wx:if="{{ info.code == 'image' }}">
+          <icon bindtap="onRemoveItem" class="removeInfo" data-index="{{ indexNum }}" type="cancel" size="20"></icon>
+          <image src="{{ serverUrl }}{{ info.imageUrl }}" mode="widthFix"></image>
+          <view style="clear:both"></view>
+          <view class="image-desc">
+            <van-cell-group>
+              <van-field
+                type="text"
+                value="{{ info.imageText }}"
+                bind:change="inputImageDesc"
+                data-index="{{ indexNum }}"
+                placeholder="图片描述"
+                border="false"
+              />
+            </van-cell-group>
+          </view>
+        </view>
+        <view class="textarea" wx:elif="{{ info.code == 'text' }}">     
+          <icon bindtap="onRemoveItem" data-index="{{ indexNum }}" class="removeInfo" type="cancel" size="20"></icon>
+          <van-cell-group>
+            <van-field
+              type="textarea"
+              autosize
+              placeholder="商品详细描述信息"
+              bind:change="inputTextDesc"
+              data-index="{{ indexNum }}"
+              value="{{ info.textContent }}"
+              border="false"
+            />
+          </van-cell-group>
+        </view>
+        </block>
+
+      </view>
+      <view class="add-info">
+          <button bindtap="addNewInfo" size="default" type="warn" plain="true">
+          + 添加商品详情介绍
+          </button>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+  <view class="btn-area">
+    <button type="warn" form-type="submit">发布商品</button>
+  </view> 
+
+</view>
+
+</form>
+
+
+</view>
+
+<van-action-sheet
+  show="{{ showAddInfo }}"
+  actions="{{ addInfoActions }}"
+  bind:select="onSelectItem"
+  bind:close="onCloseAddInfo"
+/>
+
+<van-dialog id="van-dialog" />

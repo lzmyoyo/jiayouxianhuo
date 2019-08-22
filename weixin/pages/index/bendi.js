@@ -1,13 +1,28 @@
-// pages/index/bendi.js
+// pages/product/list.js
+import areaList from '../../lib/area/area_list';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    showAreaList: false,
+    areaList: areaList
   },
 
+
+  closeAreaList() {
+    this.setData({ showAreaList: false });
+  },
+  showAreaList: function (e) {
+    this.setData({
+      showAreaList: true
+    });
+  },
+  setAreaInfo: function (e) {
+    console.log(e);
+    this.closeAreaList();
+  },
   /**
    * 生命周期函数--监听页面加载
    */

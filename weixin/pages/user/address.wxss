@@ -1,0 +1,28 @@
+.content-view{
+  padding:0px 10px 10px 10px;
+}
+.address-item{
+  border-bottom: solid #f2f2f2 1rpx;
+  padding: 10px 0px;
+}
+.name-phone text{
+  display: inline-block;
+  font-weight: 700;
+  font-size:14px;
+}
+.name-phone .phone{
+  margin-left:30px;
+}
+.address text{
+  font-size: 12px;
+}
+.add-address{
+  position: fixed;
+  bottom: 0px;
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  border-top:solid  #f2f2f2 1rpx;
+  color: #d7483a
+}

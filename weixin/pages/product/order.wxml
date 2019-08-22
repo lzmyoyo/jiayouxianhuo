@@ -1,0 +1,73 @@
+
+<view class="address-info">
+  <van-row>
+      <van-col span="23">
+        <view class="tag">
+          <text class="tag-text">家</text><text class="city">浙江省杭州市拱墅区</text>
+        </view>
+        <view class="info">
+          祥茂路99号6号楼3楼
+        </view>
+        <view class="user-phone">
+          <text class="name">林智敏</text>
+          <text class="phone">15868454077</text>
+        </view>
+      </van-col>
+      <van-col span="1">
+        <text></text>
+      </van-col>
+    </van-row>
+  
+  
+</view>
+<view class="product-item">
+  <view class="info">
+    <van-row>
+      <van-col span="6">
+        <view class="product-image">
+          <image src="/lib/image/demo/1.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+      </van-col>
+      <van-col span="18">
+        <view class="product-info">
+          <view>
+            <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+          </view>
+          <view class="sku">
+            <text>红色、L</text>
+          </view>
+          <view class="price">
+            ¥<text>80.99</text>
+            <view class="add-num">
+              <van-stepper value="{{ 1 }}" bind:change="onChange" />
+            </view>
+            <view style="clear:both"></view>
+          </view>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <view class="order-ext">
+     <input placeholder="备注留言,我们建议你先和卖家沟通后再填写"  />
+  </view>
+</view>
+
+<view class="product-price-total">
+  <van-row>
+      <van-col span="12">
+        <view class="title">商品总金额:</view>
+      </van-col>
+      <van-col span="12">
+        <view class="price">¥<text>89.00</text></view>
+      </van-col>
+    </van-row>
+</view>
+<view>
+  <van-submit-bar
+  price="{{ 3050 }}"
+  button-text="提交订单"
+  tip="浙江省杭州市拱墅区祥茂路99号科锐6号楼3楼，浙江执御信息技术有限公司"
+  bind:submit="onSubmit"
+/>
+</view>

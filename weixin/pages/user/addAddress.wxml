@@ -1,0 +1,79 @@
+<van-popup
+  show="{{ showAreaList }}"
+  position="bottom"
+  overlay="true"
+  bind:close="closeAreaList"
+>
+  <van-area area-list="{{ areaList }}" columns-num="{{ 3 }}" title="选择地区" bind:confirm="setAreaInfo" bind:cancel="closeAreaList" />
+</van-popup>
+
+<view class="main-content">
+<form report-submit="true" bindsubmit="addProduct" bindreset="formReset">
+  <view class="item-view product-title">
+    <text>收件人</text>
+    <van-cell-group>
+      <van-field
+        name="productName" 
+        value="{{ productInfo.productName }}"
+        bind:change="onInputProductName"
+        placeholder="请填写收件人姓名"
+      />
+    </van-cell-group>
+  </view>
+
+
+  <view class="item-view product-title">
+    <text>联系电话</text>
+    <van-cell-group>
+      <van-field
+        name="productPrice"
+        bind:change="onInputProductPrice"
+        value="{{ productInfo.productPrice }}"
+        placeholder="请填写收件人联系电话"
+      />
+    </van-cell-group>
+  </view>
+
+  <view class="item-view product-title" bindtap="showAreaList">
+    <text>省市区</text>
+    <van-cell-group>
+      <van-field
+        name="productYunfei"
+        bind:change=""
+        value="{{ productInfo.shippingPrice }}"
+        disabled
+        placeholder="请选择所在的省市区"
+      />
+    </van-cell-group>
+  </view>
+  <view class="item-view product-title">
+    <text>详细地址</text>
+    <van-cell-group>
+      <van-field
+        name="productTime"
+        bind:change="onInputProductExpireDay"
+        value="{{ productInfo.expireDay }}"
+        placeholder="请填写详细的地址(街道门牌号)"
+      />
+    </van-cell-group>
+  </view>
+  <view class="item-view product-title">
+    <text>地址标签</text>
+    <van-cell-group>
+      <van-field
+        name="productTime"
+        bind:change="onInputProductExpireDay"
+        value="{{ productInfo.expireDay }}"
+        placeholder="家、公司、她家、那个她家"
+      />
+    </van-cell-group>
+  </view>
+
+  
+<view class="item-view">
+  <view class="btn-area">
+    <button type="warn" form-type="submit">保存地址</button>
+  </view> 
+</view>
+</form>
+</view>

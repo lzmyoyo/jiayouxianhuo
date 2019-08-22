@@ -1,20 +1,140 @@
+<view>
 
-<view style="margin:0px 5px">
-<van-row gutter="5">
-  <van-col span="12">
-      <view>
-        <image src=""></image>
-      </view>
-  </van-col>
-  <van-col span="12">
-    <view style="background-color:#ccc;height:160rpx; width:100%">
-    ddd
+
+  <view class="product-item">
+    <view class="info">
+      <van-row>
+        <van-col span="6">
+          <view class="product-image">
+            <image src="/lib/image/demo/1.jpg" mode="widthFix"></image>
+            <view style="clear:both"></view>
+          </view>
+        </van-col>
+        <van-col span="18">
+          <view class="product-info">
+            <view>
+              <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+            </view>
+            <view class="price">
+              <text>¥80.99</text>
+            </view>
+          </view>
+        </van-col>
+      </van-row>
     </view>
-  </van-col>
-  <van-col span="12">
-    <view style="background-color:#ccc;height:160rpx; width:100%">
-    ddd
+    <view class="product-action">
+      <van-row>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="records" size="15px" />
+            <text>修改</text>
+          </view>
+        </van-col>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="exchange" size="15px" />
+            <text>下架</text>
+          </view>
+        </van-col>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="delete" size="15px" />
+            <text>删除</text>
+          </view>
+        </van-col>
+      </van-row>
     </view>
-  </van-col>
-</van-row>
+  </view>
+
+  <view class="product-item">
+    <view class="info">
+      <van-row>
+        <van-col span="6">
+          <view class="product-image">
+            <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+            <view style="clear:both"></view>
+          </view>
+        </van-col>
+        <van-col span="18">
+          <view class="product-info">
+            <view>
+              <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+            </view>
+            <view class="price">
+              <text>¥80.99</text>
+            </view>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+    <view class="product-action">
+      <van-row>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="records" size="15px" />
+            <text>修改</text>
+          </view>
+        </van-col>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="exchange" size="15px" />
+            <text>下架</text>
+          </view>
+        </van-col>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="delete" size="15px" />
+            <text>删除</text>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+
+  <view class="product-item">
+    <view class="info">
+      <van-row>
+        <van-col span="6">
+          <view class="product-image">
+            <image src="/lib/image/demo/3.jpg" mode="widthFix"></image>
+            <view style="clear:both"></view>
+          </view>
+        </van-col>
+        <van-col span="18">
+          <view class="product-info">
+            <view>
+              <text>这个是商品名称，绝对正确这个是商品名称，绝对正确</text>
+            </view>
+            <view class="price">
+              <text>¥80.99</text>
+            </view>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+    <view class="product-action">
+      <van-row>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="records" size="15px" />
+            <text>修改</text>
+          </view>
+        </van-col>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="exchange" size="15px" />
+            <text>下架</text>
+          </view>
+        </van-col>
+        <van-col span="8">
+          <view class="action">
+            <van-icon name="delete" size="15px" />
+            <text>删除</text>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+
+
 </view>

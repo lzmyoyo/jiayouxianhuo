@@ -1,0 +1,110 @@
+<van-tabs active="{{ active }}" sticky bind:change="onChange">
+  <van-tab title="商品介绍">
+    <view class="product-info">
+      <view class="price-from">
+        <van-row>
+            <van-col span="12">
+                <view class="price">
+                   ¥<text>89.00</text>
+                </view>
+            </van-col>
+            <van-col span="12">
+                <view class="from">
+                   <text>来自江西赣州龙南</text>
+                </view>
+            </van-col>
+          </van-row>
+      </view>
+      <view class="product-title">
+        <text>小台芒果1，5kg装，单果50该以上新鲜水果,小台芒果1，5kg装，单果50该以上新鲜水果</text>
+      </view>
+      <view class="user-info">
+        <text>该商品由《小兔子小小》为您提供</text>
+      </view>
+      <view class="user-tag">
+        <text class="tag">已实名认证</text>
+        <text class="tag">已缴纳保证金</text>
+      </view>
+      
+      <view class="product-image">
+        <image src="/lib/image/shangpin.jpg" mode="widthFix"></image>
+        <view style="clear:both"></view>
+      </view>
+      <view class="product-text">
+        <text>水果完全现摘现发，由于刚采摘水分非常充足，再运输过程中肯定有所损失，大家见谅，并不是却精少量，我们都会多发一点，保证商品足够重量。谢谢</text>
+      </view>
+      <view class="product-text">
+        <text>水果完全现摘现发，由于刚采摘水分非常充足，再运输过程中肯定有所损失，大家见谅，并不是却精少量，我们都会多发一点，保证商品足够重量。谢谢</text>
+      </view>
+      <view class="product-image">
+        <image src="/lib/image/shangpin.jpg" mode="widthFix"></image>
+        <view style="clear:both"></view>
+      </view>
+      <view class="product-text">
+        <text>水果完全现摘现发，由于刚采摘水分非常充足，再运输过程中肯定有所损失，大家见谅，并不是却精少量，我们都会多发一点，保证商品足够重量。谢谢</text>
+      </view>
+      <view style="height:80px">
+      </view>
+    </view>
+    <van-goods-action>
+    <van-goods-action-button
+      text="立即购买"
+      bind:click="onToOrder"
+    />
+  </van-goods-action>
+
+  <van-popup
+    show="{{ showSkuInfo }}"
+    position="bottom"
+    overlay="true"
+    bind:close="onCloseSku"
+  >
+    <view class="all-sku">
+      <view class="close-sku">
+        <van-icon name="cross" bindtap="onCloseSku" size="18px" />
+      </view>
+      <view class="sku-key-name">
+        <text>重量</text>
+      </view>
+      <view class="sku-val">
+        <text>5公斤</text>
+        <text>8公斤</text>
+        <text>10公斤</text>
+        <text>15公斤</text>
+      </view>
+      <view class="sku-key-name">
+        <text>颜色</text>
+      </view>
+      <view class="sku-val">
+        <text>红色</text>
+        <text>白色</text>
+        <text>蓝色</text>
+      </view>
+      <view class="product-add-num">
+         <van-row>
+            <van-col span="12">
+                <text>数量</text>
+            </van-col>
+            <van-col span="12">
+                <view class="add-num">
+                  <van-stepper value="{{ 1 }}" bind:change="onChange" />
+                </view>
+            </van-col>
+          </van-row>
+        
+        
+      </view>
+      <navigator url="/pages/product/order" open-type="navigate">
+      <view class="to-order">
+        <van-button square type="danger" size="small">确定</van-button>
+      </view>
+      </navigator>
+    </view>
+  </van-popup>
+
+  </van-tab>
+  <van-tab title="商品评价">
+    
+  </van-tab>
+</van-tabs>
+

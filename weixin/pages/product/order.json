@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-icon": "/dist/icon/index",
+    "van-stepper": "/dist/stepper/index",
+    "van-submit-bar": "/dist/submit-bar/index"
+  }
+}

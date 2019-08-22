@@ -18,14 +18,18 @@
 <view class="main-content">
   <view class="view-content user-nums">
     <van-row>
+      <navigator url="/pages/user/banlance" open-type="navigate">
       <van-col span="12" class="user-line">
         <label class="nums">0.00</label>
         <label class="title">余额</label>
       </van-col>
+      </navigator>
+      <navigator url="/pages/product/list" open-type="navigate">
       <van-col span="12" >
         <label class="nums">0</label>
         <label class="title">商品</label>
       </van-col>
+      </navigator>
     </van-row>
   </view>
 </view>
@@ -38,36 +42,46 @@
           <label class="action-title">我的订单</label>
         </van-col>
         <van-col span="12" style="text-align:right">
-          <label class="to-all"><van-icon size="14px" name="arrow" /></label>
+          
+          <label class="to-all"><navigator url="/pages/user/order" open-type="navigate"><van-icon size="14px" name="arrow" /></navigator></label>
+          
         </van-col>
       </van-row>
     </view>
     <view class="user-nums">
       <van-row>
+        <navigator url="/pages/user/order" open-type="navigate">
         <van-col span="6">
           <label class="actioin-image">
             <image src="/lib/image/daifukuan.png" mode="aspectFit"></image>
           </label>
           <label class="title">未付款</label>
         </van-col>
+        </navigator>
+        <navigator url="/pages/user/order" open-type="navigate">
         <van-col span="6">
           <label class="actioin-image">
             <image src="/lib/image/daifahuo.png" mode="aspectFit"></image>
           </label>
           <label class="title">待发货</label>
         </van-col>
+        </navigator>
+        <navigator url="/pages/user/order" open-type="navigate">
         <van-col span="6">
           <label class="actioin-image">
             <image src="/lib/image/distribution.png" mode="aspectFit"></image>
           </label>
           <label class="title">配送中</label>
         </van-col>
+        </navigator>
+        <navigator url="/pages/user/order" open-type="navigate">
         <van-col span="6">
           <label class="actioin-image">
             <image src="/lib/image/shouhouwuyou.png" mode="aspectFit"></image>
           </label>
           <label class="title">退货/退款</label>
         </van-col>
+        </navigator>
       </van-row>
     </view>
   </view>
@@ -84,24 +98,30 @@
     </view>
     <view class="user-nums">
       <van-row>
-        <van-col span="8">
-          <label class="actioin-image">
-            <image src="/lib/image/tianjiashangpin.png" mode="aspectFit"></image>
-          </label>
-          <label class="title">发布商品</label>
-        </van-col>
+        <navigator url="/pages/product/add" open-type="navigate">
+          <van-col span="8">
+            <label class="actioin-image">
+              <image src="/lib/image/tianjiashangpin.png" mode="aspectFit"></image>
+            </label>
+            <label class="title">发布商品</label>
+          </van-col>
+        </navigator>
+        <navigator url="/pages/product/list" open-type="navigate">
         <van-col span="8">
           <label class="actioin-image">
             <image src="/lib/image/ai-list.png" mode="aspectFit"></image>
           </label>
           <label class="title">我的商品</label>
         </van-col>
+        </navigator>
+        <navigator url="/pages/user/businessOrder" open-type="navigate">
         <van-col span="8">
           <label class="actioin-image">
             <image src="/lib/image/wodedingdan.png" mode="aspectFit"></image>
           </label>
           <label class="title">我的订单</label>
         </van-col>
+        </navigator>
       </van-row>
     </view>
   </view>
@@ -118,19 +138,25 @@
     </view>
     <view class="user-nums">
       <van-row>
-        <van-col span="8">
-          <label class="actioin-image">
-            <image src="/lib/image/dizhi.png" mode="aspectFit"></image>
-          </label>
-          <label class="title">收获地址</label>
-        </van-col>
+        <navigator url="/pages/user/address" open-type="navigate">
+          <van-col span="8">
+            <label class="actioin-image">
+              <image src="/lib/image/dizhi.png" mode="aspectFit"></image>
+            </label>
+            <label class="title">收获地址</label>
+          </van-col>
+        </navigator>
+        <navigator url="/pages/user/setting" open-type="navigate">
         <van-col span="8">
           <label class="actioin-image">
             <image src="/lib/image/shezhi.png" mode="aspectFit"></image>
           </label>
           <label class="title">设置</label>
         </van-col>
+        </navigator>
       </van-row>
     </view>
   </view>
 </view>
+
+

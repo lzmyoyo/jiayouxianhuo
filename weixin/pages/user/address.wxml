@@ -1,0 +1,45 @@
+<view class="content-view">
+      <view class="address-item">
+        <view class="name-phone">
+          <text class="name">林智敏</text>
+          <text class="phone">15868454077</text>
+        </view>
+        <view class="address">
+          <van-row>
+            <van-col span="22">
+              <text>江西省赣州市龙南县龙南镇民主街1
+              </text>
+            </van-col>
+            <van-col span="2">
+              <van-icon name="edit" size="15px" />
+            </van-col>
+          </van-row>
+        </view>
+      </view>
+
+
+      <view class="address-item">
+        <view class="name-phone">
+          <text class="name">林智敏</text>
+          <text class="phone">15868454077</text>
+        </view>
+        <view class="address">
+          <van-row>
+            <van-col span="22">
+              <text>江西省赣州市龙南县龙南镇民主街110号</text>
+            </van-col>
+            <van-col span="2">
+              <van-icon name="edit" size="15px" />
+            </van-col>
+          </van-row>
+        </view>
+      </view>
+
+
+
+    </view>
+    <navigator url="/pages/user/addAddress" open-type="navigate">
+        <view class="add-address">
+          <text> ＋ 添加地址</text>
+        </view>
+    </navigator>

@@ -1,13 +1,22 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/user/login",
-    "pages/index/me",
+    "pages/product/order",
+    "pages/product/info",
+    "pages/user/addAddress",
+    "pages/user/address",
+    "pages/user/order",
     "pages/product/list",
+    "pages/index/checkout",
+    "pages/index/cart",
     "pages/product/add",
+    "pages/index/me",
+    "pages/user/login",
     "pages/index/category",
     "pages/index/bendi",
-    "pages/index/cart"    
+    "pages/user/setting",
+    "pages/user/businessOrder",
+    "pages/user/banlance" 
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,12 +45,6 @@
         "text": "分类",
         "iconPath": "/lib/image/fenlei.png",
         "selectedIconPath": "/lib/image/select/fenlei.png"
-      },
-      {
-        "pagePath": "pages/index/cart",
-        "text": "购物车",
-        "iconPath": "/lib/image/gouwucheman.png",
-        "selectedIconPath": "/lib/image/select/gouwucheman.png"
       },
       {
         "pagePath": "pages/index/me",

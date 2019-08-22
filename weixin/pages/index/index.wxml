@@ -1,0 +1,128 @@
+<van-popup
+  show="{{ showAreaList }}"
+  position="bottom"
+  overlay="true"
+  bind:close="closeAreaList"
+>
+  <van-area area-list="{{ areaList }}" columns-num="{{ 3 }}" title="选择地区" bind:confirm="setAreaInfo" bind:cancel="closeAreaList" />
+</van-popup>
+<view class="select-area" bindtap="showAreaList">
+   <van-row>
+    <van-col span="2">
+      <van-icon name="location-o" size="20px" />  
+    </van-col>
+    <van-col span="16">
+      <text>浙江省 杭州市 拱墅区</text>
+    </van-col>
+    <van-col span="6">
+      <view class="area-action" style="text-align:right">
+        <van-icon name="arrow" />
+      </view>
+    </van-col>
+   </van-row>
+</view>
+<view>
+  <van-search value="{{ value }}" use-action-slot bind:search="onSearch" placeholder="请输入搜索关键词">
+  <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search>
+</view>
+
+
+<view style="margin:12px 12px">
+<van-row gutter="8">
+  <van-col span="12">
+      <navigator url="/pages/product/info" open-type="navigate">
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/2.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      </navigator>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/1.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/3.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+  </van-col>
+  <van-col span="12">
+    <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/4.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/7.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="productItem">
+        <view class="productImage">
+          <image src="/lib/image/demo/6.jpg" mode="widthFix"></image>
+          <view style="clear:both"></view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            <text>浦江葡萄，朋友家自己种植的，现采现发。</text>
+          </view>
+          <view class="product-price">
+            <text> ¥ 70.00</text>
+          </view>
+        </view>
+      </view>
+  </van-col>
+</van-row>
+</view>
+<view style="display:{{ showLoadMore }}; height:40px; text-align:center; line-height:40px">
+  logdding....
+</view>
+

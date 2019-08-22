@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-field": "/dist/field/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-icon": "/dist/icon/index",
+    "van-collapse": "/dist/collapse/index",
+    "van-collapse-item": "/dist/collapse-item/index",
+    "van-action-sheet": "/dist/action-sheet/index",
+    "van-dialog": "/dist/dialog/index",
+    "van-area": "/dist/area/index",
+    "van-popup": "/dist/popup/index"
+  }
+}
